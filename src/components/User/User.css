@@ -1,0 +1,11 @@
+.user{
+    border-radius: 50%;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../../assets/Images/default-user-icon.png')
+}

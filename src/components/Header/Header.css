@@ -1,0 +1,10 @@
+.page-head{
+    display: flex;
+    padding : 5px 5px;
+    align-items: center;
+}
+
+.pagename{
+    font-size: 18px;
+    padding-left : 10px;
+}

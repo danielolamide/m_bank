@@ -1,0 +1,53 @@
+.searchBar{
+    display: none;
+}
+.searchBar input{
+    border-radius : 30px;
+    outline: none;
+    padding : 8px;
+    border-style: none;
+    border : 1px solid #EAEAEA;
+    transition : 0.3s;
+}
+
+.searchBar input:focus{
+    border-color : dodgerblue;
+}
+
+.searchBar input{
+    padding-left : 30px;
+}
+
+.searchBar{
+    position: relative;
+}
+
+.searchBar i{
+    position: absolute;
+    left : 0px;
+    top : -1px;
+    padding: 6px 10px;
+    color : #EAEAEA;
+    transition : 0.3s;
+    font-size: 15px;
+}
+
+.searchBar input:focus + i{
+    color : dodgerblue;
+}
+
+@media only screen and (min-width: 600px){
+    .searchBar{
+        display: inline;
+    }
+}
+@media only screen and (min-width : 2500px){
+    .searchBar input{
+        font-size: 25px;
+        padding-left: 38px;
+    }
+    .searchBar i{
+        font-size: 25px;
+        top: -10px;
+    }
+}

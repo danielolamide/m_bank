@@ -1,0 +1,23 @@
+.nav-items{
+    padding : 5px 30px;
+}
+.nav-items a{
+    text-decoration: none;
+    color: #A3A3A3;
+    font-size: 20px;
+}
+
+@media only screen and (min-width : 600px) {
+    .nav-items a{
+        font-size: 25px;
+    }
+    .nav-items{
+        margin : 0;
+    }
+}
+@media only screen and (min-width : 2500px ){
+    .nav-items a{
+        font-size: 35px;
+
+    }
+}
