@@ -40,11 +40,15 @@
     .searchBar{
         display: inline;
     }
+    .searchBar input{
+        width : 200px;
+    }
 }
 @media only screen and (min-width : 2500px){
     .searchBar input{
         font-size: 25px;
         padding-left: 38px;
+        width : 300px;
     }
     .searchBar i{
         font-size: 25px;

@@ -1,16 +1,17 @@
 .nav-items{
-    padding : 5px 30px;
+    padding : 10px 30px;
 }
 .nav-items a{
     text-decoration: none;
-    color: #A3A3A3;
+    color : #A2A2A2;
+    padding : 10px;
     font-size: 20px;
+}
+.nav-items a:hover{
+    color : #1564B2;
 }
 
 @media only screen and (min-width : 600px) {
-    .nav-items a{
-        font-size: 25px;
-    }
     .nav-items{
         margin : 0;
     }
