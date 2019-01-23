@@ -5,15 +5,18 @@ class RotatingInput extends Component{
         currentIndex : 0
     }
     timeoutId = null ;
-    duration = 1000;
-    placeholders = ['😂','🤣','😆'];
+    duration = 500;
+    placeholders = ['😂','🤣','😆','😃','😝','😏','🤡'];
     componentDidMount(){
         this.timeoutId = setTimeout(this.update,this.duration);
 
     }
     componentDidUpdate(prevProps, prevState){
-        if(prevState.currentIndex !== this.state.currentIndex){
+        if((prevState.currentIndex !== this.state.currentIndex)&&(this.state.currentIndex !== this.placeholders.length)){
             this.timeoutId = setTimeout(this.update, this.duration);
+        }
+        if(this.state.currentIndex === this.placeholders.length){
+            this.setState(({currentIndex}) =>({currentIndex : 0}))
         }
     }
     componentWillUnmount(){

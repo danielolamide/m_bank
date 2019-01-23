@@ -31,6 +31,7 @@ class Posts extends Component{
                     }
                 });
                 this.setState({images : updatedImages});
+                //this.setState({posts : [...this.state.posts,this.state.images]})
 
             });
 
