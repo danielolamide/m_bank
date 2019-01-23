@@ -1,16 +1,27 @@
 import React from 'react';
+import User from '../User/User';
+import './Post.css';
+
 
 const post = (props)=>(
     <article className= 'post'>
-        <div className='uImage'></div>
-        <div>
-            <h4>{props.uName}</h4>
-            <h5>{props.uHandle}</h5>
-            <h5>{props.pTime}</h5>
+        <div className= 'post-holder'>
+            <div className='userImage'>
+                <User/>
+            </div>
+            <div className = 'post-body'>
+                <div className = 'post-header'>
+                    <span>{props.uName}</span>
+                    <span>{props.uHandle}</span>
+                    <span>.</span>
+                    <span>{props.pTime}</span>
+                </div>
+                <div className = 'post-content'>
+                    {props.postContent}
+                </div>
+            </div>
         </div>
-        <div>{props.postContent}</div>
     </article>
+
 );
-
-
 export default post;
