@@ -7,7 +7,7 @@
     "feed";
   grid-template-rows: auto auto 1fr;
   grid-gap: 5px;
-  height: 100vh;
+  /* height: 100vh; */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -23,6 +23,7 @@
 .trends-wrapper {
   grid-area: trends;
   display: none;
+  background-color: white;
 }
 
 .feed-wrapper {
@@ -34,9 +35,23 @@
 .advertisment-wrapper {
   grid-area: ad;
   display: none;
-
+  background-color: white;
 }
-
+.post-button{
+  position: fixed;
+  bottom : 15px;
+  right: 10px;
+  z-index: 99;
+  border-style: none;
+  outline: none;
+  background-color: dodgerblue;
+  color: white;
+  /* cursor: pointer; */
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 1px 3px 3px #CCC; 
+}
 
 @media only screen and (min-width: 600px) {
   .App {
@@ -45,7 +60,7 @@
       "trends feed ad";
     grid-template-columns: 300px 1fr 300px;
     grid-template-rows: auto 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
   }
 
   .advertisment-wrapper {
@@ -57,5 +72,10 @@
   }
   .header{
     display: none;
+  }
+  .post-button{
+    bottom: 35px;
+    right: 40px;
+    cursor: pointer;
   }
 }

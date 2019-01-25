@@ -13,9 +13,13 @@ class App extends Component {
         <div className ='trends-wrapper'>Trends</div>
         <div className='feed-wrapper'><Posts/></div>
         <div className='advertisment-wrapper'>Ads</div>
+        <div>
+          <button className='post-button'><i className ='fal fa-pen-alt'></i></button>
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+ 

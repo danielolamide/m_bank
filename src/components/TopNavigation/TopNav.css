@@ -1,6 +1,8 @@
 .navigation{
   margin : 0 auto;
   border-bottom: 1px solid #A2A2A2;
+  background-color: white;
+  /* position : fixed; */
 }
 
 @media only screen and (min-width : 2500px){

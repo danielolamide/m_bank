@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Post from '../../components/Post/Post';
 import axios from 'axios';
+import NewPost from '../NewPost/NewPost';
+import Aux from '../../hoc/Aux/Aux';
+import './Posts.css';
 
 class Posts extends Component{
     state = {
@@ -22,28 +25,15 @@ class Posts extends Component{
             .catch(error=>{
                 this.setState({error : true});
             });
-        axios.get('https://jsonplaceholder.typicode.com/photos')
-            .then(response =>{
-                const images =response.data;
-                const updatedImages = images.map(image=>{
-                    return {
-                        ...image
-                    }
-                });
-                this.setState({images : updatedImages});
-                //this.setState({posts : [...this.state.posts,this.state.images]})
-
-            });
-
     }
     render(){
         let posts = <p style={{textAlign : 'center'}}>Network Error</p>
         if(!this.state.error){
            posts  = this.state.posts.map(post =>{
                return(
+
                    <Post
                         key = {post.id}
-                        uImage
                         uName = {post.userId}
                         uHandle = {post.id}
                         postContent = {post.body}
@@ -52,9 +42,16 @@ class Posts extends Component{
            }) 
         }
         return(
-            <div className='posts'>
-                {posts}
-            </div>
+            <Aux>
+                <div className = 'posts'>
+                    <div className= 'newpost'>
+                        <NewPost/>
+                    </div>
+                    <div>
+                        {posts}
+                    </div>
+                </div>
+            </Aux>
         )
     }
 }
