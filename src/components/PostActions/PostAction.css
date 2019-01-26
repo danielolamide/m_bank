@@ -1,0 +1,20 @@
+.post-action-container{
+    display: flex;
+}
+.post-action-container div:nth-child(1){
+    margin-right: auto;
+}
+.post-action-container div:nth-child(2){
+    margin-right: auto;
+}
+.post-action-container div:nth-child(3){
+    margin-right: auto;
+}
+
+.post-action-container div a{
+    color : #A2A2A2;
+}
+
+.post-action-container span{
+    padding: 5px;
+}

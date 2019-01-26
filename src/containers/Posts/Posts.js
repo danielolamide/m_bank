@@ -12,31 +12,45 @@ class Posts extends Component{
         error : false
     }
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
-            .then(response=>{
-                const posts = response.data;
-                const updatedPosts = posts.map(post=>{
+        // axios.get('https://jsonplaceholder.typicode.com/posts')
+        //     .then(response=>{
+        //         const posts = response.data;
+        //         const updatedPosts = posts.map(post=>{
+        //             return {
+        //                 ...post
+        //             }
+        //         });
+        //         this.setState({posts : updatedPosts});
+        //     })
+        //     .catch(error=>{
+        //         this.setState({error : true});
+        //     });
+        axios.get('https://jsonplaceholder.typicode.com/photos')
+            .then(response =>{
+                const images = response.data.slice(0,4);
+                const updatedImages = images.map(image=>{
                     return {
-                        ...post
+                        ...image
                     }
-                });
-                this.setState({posts : updatedPosts});
+                })
+                this.setState({images : updatedImages});
             })
             .catch(error=>{
                 this.setState({error : true});
             });
+
     }
     render(){
         let posts = <p style={{textAlign : 'center'}}>Network Error</p>
         if(!this.state.error){
-           posts  = this.state.posts.map(post =>{
+           posts  = this.state.images.map(post =>{
                return(
-
                    <Post
                         key = {post.id}
-                        uName = {post.userId}
+                        uName = {post.albumId}
                         uHandle = {post.id}
-                        postContent = {post.body}
+                        //ImageURL = {post.url}
+                        postContent = {post.url}
                    />
                )
            }) 

@@ -1,7 +1,7 @@
 .post {
     border-bottom: 1px solid #E3E3E3;
     padding: 10px 15px;
-    max-height: 600px;
+    max-height: 500px;
     background-color: white;
 }
 
@@ -20,9 +20,10 @@
 .post-body {
     grid-area: post-body;
     display: grid;
-    grid-template-rows: 20px 1fr;
+    grid-template-rows: 20px 1fr 20px;
     grid-template-areas: "post-header"
-        "post-content";
+        "post-content"
+        "post-action";
 }
 
 .post-header {
@@ -33,21 +34,36 @@
     grid-gap: 2px;
 }
 
-.post-header > span:nth-child(1){
-    grid-area : username
-}
-.post-header > span:nth-child(2){
-    grid-area : userHandle
-}
-.post-header > span:nth-child(3){
-    grid-area : period
-}
-.post-header > span:nth-child(4){
-    grid-area : time
+.post-header>span:nth-child(1) {
+    grid-area: username
 }
 
+.post-header>span:nth-child(2) {
+    grid-area: userHandle
+}
+
+.post-header>span:nth-child(3) {
+    grid-area: period
+}
+
+.post-header>span:nth-child(4) {
+    grid-area: time
+}
 
 .post-content {
     grid-area: post-content;
     text-align: start;
+    max-height: 297px;
+    max-width: 528px;
+    overflow: hidden;
+}
+
+.post-content img{
+    height: auto;
+    width : 100%;
+}
+
+
+.post-action {
+    grid-area: post-action;
 }

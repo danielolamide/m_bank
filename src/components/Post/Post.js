@@ -1,7 +1,7 @@
 import React from 'react';
 import User from '../User/User';
 import './Post.css';
-
+import PostActions from '../PostActions/PostActions';
 
 const post = (props)=>(
     <article className= 'post'>
@@ -17,7 +17,11 @@ const post = (props)=>(
                     <span>{props.pTime}</span>
                 </div>
                 <div className = 'post-content'>
-                    {props.postContent}
+                    <span>Short meme description</span>
+                    <img src={props.postContent} alt='Testing'/>
+                </div>
+                <div className='post-action'>
+                    <PostActions/>
                 </div>
             </div>
         </div>
