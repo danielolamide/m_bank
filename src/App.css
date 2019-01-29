@@ -50,7 +50,7 @@
   padding: 15px;
   border-radius: 50%;
   font-size: 20px;
-  box-shadow: 0 1px 3px 3px #CCC; 
+  box-shadow: 1px 2px 10px 1px rgb(102, 102, 102); 
 }
 
 @media only screen and (min-width: 600px) {
@@ -74,8 +74,6 @@
     display: none;
   }
   .post-button{
-    bottom: 35px;
-    right: 40px;
-    cursor: pointer;
+   /* display: none; */
   }
 }

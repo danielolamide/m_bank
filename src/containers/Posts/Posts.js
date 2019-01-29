@@ -9,7 +9,15 @@ class Posts extends Component{
     state = {
         posts : [],
         images : [],
-        error : false
+        error : false,
+        show : true
+    }
+    showModal(){
+        this.setState({show : true});
+    }
+  
+    hideModal(){
+        this.setState({show : false});
     }
     componentDidMount() {
         // axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -59,7 +67,7 @@ class Posts extends Component{
             <Aux>
                 <div className = 'posts'>
                     <div className= 'newpost'>
-                        <NewPost/>
+                        <NewPost show={this.state.show} showModal = {this.showModal} hideModal = {this.hideModal}/>
                     </div>
                     <div>
                         {posts}

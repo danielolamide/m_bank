@@ -6,17 +6,6 @@ import Modal from '../../components/Modal/Modal';
 import NewPostCreation from '../NewPostCreation/NewPostCreation';
 
 class NewPost extends Component{    
-    state = {
-        show : false
-    }
-
-    showModal(){
-        this.setState({show : true});
-    }
-    hideModal(){
-        this.setState({show : false});
-    }
-
     render(){
         return(
             <Aux>
@@ -24,14 +13,17 @@ class NewPost extends Component{
                         <div className='user-image'>
                             <User/>
                         </div>
-                        <a href ='/'><input placeholder='Post a new meme 😁'></input></a>
+                        <a href ="/"><input placeholder='Post a new meme 😁'></input></a>
                         <div className = 'attatch-button-holder'>
                             <a className= 'attatch-button' href='/'><i className = 'fal fa-images'></i></a>
                         </div>
                 </div>
-                <Modal show = {this.state.show} handleClose={this.hideModal}>
+                <Modal show = {this.props.show} handleClose={this.props.hideModal}>
                     <NewPostCreation/>
                 </Modal>
+                <div>
+                    <button onClick={this.props.showModal} className='post-button'><i className ='fal fa-pen-alt'></i></button>
+                </div>
             </Aux>
         )
     }
