@@ -10,14 +10,16 @@ class Posts extends Component{
         posts : [],
         images : [],
         error : false,
-        show : true
+        show : false
     }
-    showModal(){
+    showModal= ()=>{
         this.setState({show : true});
+        document.body.style.overflow = 'hidden';
     }
   
-    hideModal(){
+    hideModal= ()=>{
         this.setState({show : false});
+        document.body.style.overflowY = 'visible'
     }
     componentDidMount() {
         // axios.get('https://jsonplaceholder.typicode.com/posts')
@@ -72,6 +74,9 @@ class Posts extends Component{
                     <div>
                         {posts}
                     </div>
+                </div>
+                <div>
+                    <button onClick={this.showModal} className='post-button'><i className ='fal fa-pen-alt'></i></button>
                 </div>
             </Aux>
         )

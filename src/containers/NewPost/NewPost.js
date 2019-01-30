@@ -21,9 +21,7 @@ class NewPost extends Component{
                 <Modal show = {this.props.show} handleClose={this.props.hideModal}>
                     <NewPostCreation/>
                 </Modal>
-                <div>
-                    <button onClick={this.props.showModal} className='post-button'><i className ='fal fa-pen-alt'></i></button>
-                </div>
+                
             </Aux>
         )
     }
