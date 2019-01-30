@@ -19,9 +19,10 @@
 .nav-ul > li:nth-child(4){
     display: none;
 }
-.nav-ul > li:nth-child(6){
+.user-btn-holder{
     display: none;
 }
+
 @media only screen and (min-width : 600px){
     .nav-ul > li:nth-child(1){
         margin-right: 0;
@@ -39,9 +40,36 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .nav-ul > li:nth-child(6){
-        padding-top: 8px;
-        padding-bottom : 0px;
+    .user-button{
+        border-style: none;
+        position: relative;
+        outline: none;
+        width : 250px;
+        text-align: left;
+        padding: 1px 10px;
+        background-color: white;
+    }
+    .user-button:hover{
+        cursor: pointer;
+        background-color: #E8F5FD;
+        border-radius: 30px;
+    }
+    .user-button div{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .user-btn-holder{
+        margin-right: 20px;
         display: block;
+    }
+    .user-button span{
+       vertical-align: middle;
+       margin-left: 10px;
+       font-size: 14px;
+       font-weight: bold;
+       display: inline-block;
+    }
+    .user-button span i {
+        padding : 0 5px;
     }
 }

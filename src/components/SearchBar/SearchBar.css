@@ -39,6 +39,8 @@
 @media only screen and (min-width: 600px){
     .searchBar{
         display: inline;
+        margin-left: auto;
+        margin-right: 30px;
     }
     .searchBar input{
         width : 200px;

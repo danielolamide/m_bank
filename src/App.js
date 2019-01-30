@@ -10,6 +10,7 @@ import './App.css';
 class App extends Component {
 
   render() {
+    document.body.style.overflowX = 'hidden';
     return (
       <BrowserRouter>
         <div className="App">

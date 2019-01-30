@@ -13,7 +13,7 @@ const items = (props)=>(
         <Item link ='/notifications'><i className ="fal fa-bell"></i></Item>
         <li><Logo/></li>
         <li><SearchBar placeholder ='Search memeBank 😂'/></li>
-        <Item link ='/'><User/></Item>
+        <div className='user-btn-holder'><button className='user-button'><User/><span>UserName<i className='fas fa-caret-down'></i></span></button></div>
     </ul>
 )
 
