@@ -16,7 +16,7 @@ class App extends Component {
         <div className="App">
           <div className = 'header'><Header pagehead='Home'/></div>
           <div className ='top-nav'><TopNav/></div>
-          <Route path = '/home'  component={Home}/>
+          <Route path = '/home' component={Home}/>
           <Route path = '/discover' component={Discover}/>
           <Route path = '/notifications' component={Notifications}/>
         </div>
