@@ -8,6 +8,7 @@
     border-style: none;
     border : 1px solid #EAEAEA;
     transition : 0.3s;
+    background-color :  #E6ECF0;
 }
 
 .searchBar input:focus{
@@ -27,7 +28,7 @@
     left : 0px;
     top : -1px;
     padding: 6px 10px;
-    color : #EAEAEA;
+    color : #A2A2A2;
     transition : 0.3s;
     font-size: 15px;
 }

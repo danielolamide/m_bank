@@ -14,11 +14,13 @@
 
 
 .newpost-container input {
-    border: 1px solid #A2A2A2;
+    border: hidden;
     padding: 0 10px;
     border-radius: 30px;
     width: 500px;
-    margin: 0 ;
+    height: 35px;
+    background-color : #E6ECF0;
+    margin : 8px 6px;
     outline: none;
     font-size: 13px;
     transition: all .3s ease-in;
@@ -26,7 +28,7 @@
 
 .attatch-button-holder{
     font-size: 23px;
-    color : dodgerblue;
+    color : #3AA1F2;
 }
 
 .attatch-button-holder{
