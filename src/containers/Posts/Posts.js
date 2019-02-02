@@ -75,9 +75,9 @@ class Posts extends Component{
                         {posts}
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <button onClick={this.showModal} className='post-button'><i className ='fal fa-pen-alt'></i></button>
-                </div>
+                </div> */}
             </Aux>
         )
     }

@@ -5,10 +5,10 @@ import Discover from '../src/containers/Discover/Discover';
 import TopNav from '../src/components/TopNavigation/TopNav';
 import Header from '../src/components/Header/Header';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Modal from '../src/components/Modal/Modal';
 import './App.css';
 
 class App extends Component {
-
   render() {
     document.body.style.overflowX = 'hidden';
     return (
@@ -19,6 +19,7 @@ class App extends Component {
           <Route path = '/home' component={Home}/>
           <Route path = '/discover' component={Discover}/>
           <Route path = '/notifications' component={Notifications}/>
+          <Modal/>
         </div>
       </BrowserRouter>
     );
