@@ -33,23 +33,14 @@
     box-shadow: 0;
     cursor: pointer;
     outline : none;
+    color : dodgerblue;
+    font-size: 16px;
 }
 
 .modal-body {
     padding-top: .25em;
 }
 
-.hide-visually {
-    border: 0 !important;
-    clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    position: absolute !important;
-    width: 1px !important;
-    white-space: nowrap !important;
-}
 
 @media screen and (min-width : 500px) {
     .modal {

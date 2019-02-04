@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from  'react-dom';
 import './ModalContent.css';
 
-const ModalContent = ()=>{
+const ModalContent = (props)=>{
     return ReactDOM.createPortal(
-        <aside className = 'modal-cover'>
-            <div className = 'modal'>
-                <button className = 'modal-close'>
+        <aside className = 'modal-cover' 
+            tabIndex = '0'
+            onKeyDown={props.escClose}
+            onClick = {props.onClickAway}
+        >
+            <div className = 'modal' ref = {props.modalRef}>
+                <button className = 'modal-close' onClick={props.onClose}>
                     <i className = 'fal fa-times'></i>
-                    <span className = 'hide-visually'>Close</span>
                 </button>
                 <div className ='modal-body'>
                     CONTENT HERE

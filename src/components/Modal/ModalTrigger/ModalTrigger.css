@@ -2,7 +2,7 @@
     position: fixed;
     bottom : 15px;
     right: 10px;
-    /* z-index: 99; */
+    z-index: 99;
     border-style: none;
     outline: none;
     background-color: dodgerblue;
