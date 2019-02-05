@@ -9,6 +9,9 @@ import Modal from '../src/components/Modal/Modal';
 import './App.css';
 
 class App extends Component {
+  componentDidMount(){
+    document.title = 'Home / memeBank';
+  }
   render() {
     document.body.style.overflowX = 'hidden';
     return (
