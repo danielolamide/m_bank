@@ -5,7 +5,7 @@ import './ModalContent.css';
 const ModalContent = (props)=>{
     return ReactDOM.createPortal(
         <aside className = 'modal-cover' 
-            tabIndex = '0'
+            tabIndex = '-1'
             onKeyDown={props.escClose}
             onClick = {props.onClickAway}
         >

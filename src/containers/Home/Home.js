@@ -7,7 +7,7 @@ class Home extends Component{
         return(
             <Aux>
                 <div className ='trends-wrapper'>Trends</div>
-                <div className='feed-wrapper'><Posts/></div>
+                <div className='feed-wrapper'><Posts onOpen = {this.props.onOpen}/></div>
                 <div className='advertisment-wrapper'>Ads</div>
             </Aux>
         )

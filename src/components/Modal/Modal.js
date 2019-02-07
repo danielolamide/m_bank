@@ -1,37 +1,33 @@
 import React, {Component, Fragment} from 'react';
-import ModalTrigger from './ModalTrigger/ModalTrigger';
 import ModalContent from './ModalContent/ModalContent';
 
 class Modal extends Component{
 
-    state = {
-        isOpen : false
-    }
-    onOpen= ()=>{
-        this.setState({isOpen : true});
-        document.querySelector('html').style.overflow = 'hidden';
-    };
-    onClose = ()=>{
-        this.setState({isOpen : false});
-        document.querySelector('html').style.overflow = 'visible';
-    };
-    onKeyDownHandler = (event)=>{
-       return event.keyCode ===27 && this.onClose();
-    }
+    // state = {
+    //     isOpen : false
+    // }
+    // onOpen= ()=>{
+    //     this.setState({isOpen : true});
+    //     document.querySelector('html').style.overflow = 'hidden';
+    // };
+    // onClose = ()=>{
+    //     this.setState({isOpen : false});
+    //     document.querySelector('html').style.overflow = 'visible';
+    // };
+    // onKeyDownHandler = (event)=>{
+    //    return event.keyCode ===27 && this.onClose();
+    // }
     onClickAway = (e)=>{
         if(this.modalNode && this.modalNode.contains(e.target)) return;
-        this.onClose();
+        this.props.closed();
     }
     render(){
-        const {isOpen} = this.state;
+        const {isOpen} = this.props.isOpen;
         return(
             <Fragment>
-                <ModalTrigger
-                    onOpen = {this.onOpen}
-                />
                 {isOpen &&
-                    <ModalContent onClose = {this.onClose}
-                     escClose={this.onKeyDownHandler}
+                    <ModalContent onClose = {this.props.closed}
+                     escClose={this.props.keyDownHandler}
                      modalRef = {n => this.modalNode = n}
                      onClickAway = {this.onClickAway}
                     />
