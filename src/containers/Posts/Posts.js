@@ -59,7 +59,7 @@ class Posts extends Component{
             <Aux>
                 <div className = 'posts'>
                     <div className= 'newpost'>
-                        <NewPost onOpen = {this.props.onOpen}/>
+                        <NewPost onOpen = {this.props.onOpen} placeholder = 'Post a new meme 😂'/>
                     </div>
                     <div>
                         {posts}

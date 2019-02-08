@@ -11,7 +11,7 @@ class NewPost extends Component{
                         <div className='user-image'>
                             <User/>
                         </div>
-                        <input placeholder='Post a new meme 😁'></input>
+                        <textarea placeholder={this.props.placeholder}></textarea>
                         <div className = 'attatch-button-holder'>
                             <i className = 'fal fa-images'></i>
                         </div>

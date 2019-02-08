@@ -15,11 +15,11 @@ class App extends Component {
   }
   onOpen= ()=>{
       this.setState({isOpen : true});
-      document.querySelector('html').style.overflow = 'hidden';
+      document.querySelector('body').style.overflow = 'hidden';
   };
   onClose = ()=>{
       this.setState({isOpen : false});
-      document.querySelector('html').style.overflow = 'visible';
+      document.querySelector('body').style.overflow = 'visible';
   };
   onKeyDownHandler = (event)=>{
     return event.keyCode ===27 && this.onClose();

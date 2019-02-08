@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from  'react-dom';
 import './ModalContent.css';
+import NewPost from '../../../containers/NewPost/NewPost';
 
 const ModalContent = (props)=>{
     return ReactDOM.createPortal(
@@ -10,11 +11,16 @@ const ModalContent = (props)=>{
             onClick = {props.onClickAway}
         >
             <div className = 'modal' ref = {props.modalRef}>
-                <button className = 'modal-close' onClick={props.onClose}>
-                    <i className = 'fal fa-times'></i>
-                </button>
+                <div className = 'modal-head'>
+                    <button className = 'modal-close' onClick={props.onClose}>
+                        <i className = 'fal fa-times'></i>
+                     </button>
+                    <button className = 'process-post'>
+                        Post
+                    </button> 
+                </div>
                 <div className ='modal-body'>
-                    CONTENT HERE
+                    <NewPost placeholder = 'Short Meme Description'/>
                 </div>
             </div>
         </aside>,
