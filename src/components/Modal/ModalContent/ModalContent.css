@@ -37,7 +37,7 @@
     font-size: 16px;
     margin-right: auto;
     outline: none;
-
+    background-color: inherit;
 }
 
 .modal-close:hover {
@@ -105,7 +105,6 @@
 
     .modal-body {
         padding-top: .25em;
-
     }
 
 
