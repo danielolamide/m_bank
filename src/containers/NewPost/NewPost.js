@@ -13,7 +13,8 @@ class NewPost extends Component{
                         </div>
                         <textarea placeholder={this.props.placeholder}></textarea>
                         <div className = 'attatch-button-holder'>
-                            <i className = 'fal fa-images'></i>
+                            <input type ='file' className = 'inputFile' id='attatchFile'/>
+                            <label for = 'attatchFile'><i className = 'fal fa-images'></i></label>
                         </div>
                 </div>
             </Aux>
