@@ -14,7 +14,7 @@ class NewPost extends Component{
                         <textarea placeholder={this.props.placeholder}></textarea>
                         <div className = 'attatch-button-holder'>
                             <input type ='file' className = 'inputFile' id='attatchFile'/>
-                            <label for = 'attatchFile'><i className = 'fal fa-images'></i></label>
+                            <label htmlFor = 'attatchFile'><i className = 'fal fa-images'></i></label>
                         </div>
                 </div>
             </Aux>

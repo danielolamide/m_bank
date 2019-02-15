@@ -1,10 +1,12 @@
 import React from 'react';
-import Items from '../NavigationItems/Items';
+import SignedInItems from '../Layout/NavigationItems/SignedInItems';
+// import SignedOutItems from '../Layout/NavigationItems/SignedOutItems';
 import './TopNav.css';
 
 const topNav = (props)=>(
     <nav className='navigation'>
-        <Items/>
+        <SignedInItems/>
+        {/* <SignedOutItems/> */}
         {/* <User/> */}
     </nav>
 )

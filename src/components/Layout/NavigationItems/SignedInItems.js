@@ -1,12 +1,12 @@
 import React from 'react';
 import Item from './NavigationItem/Item';
-import SearchBar from '../SearchBar/SearchBar';
-import User from '../User/User';
-import Logo from '../Logo/Logo';
-import './Items.css';
-import '../../assets/Fonts/FontAwesome/FA/css/all.min.css';
+import SearchBar from '../../SearchBar/SearchBar';
+import User from '../../User/User';
+import Logo from '../../Logo/Logo';
+import './SignedInItems.css';
+import '../../../assets/Fonts/FontAwesome/FA/css/all.min.css';
 
-const items = (props)=>(
+const SignedInItems = (props)=>(
     <ul className= 'nav-ul'>
         <Item link ='/home'><i className ='fal fa-home'></i></Item>
         <Item link ='/discover'><i className ="fal fa-search"></i></Item>
@@ -18,4 +18,4 @@ const items = (props)=>(
 )
 
 
-export default items;
+export default SignedInItems;
