@@ -5,7 +5,7 @@ import './TopNav.css';
 
 const topNav = (props)=>(
     <nav className='navigation'>
-        <SignedInItems/>
+        {/* <SignedInItems/> */}
         <SignedOutItems/>
         {/* <User/> */}
     </nav>

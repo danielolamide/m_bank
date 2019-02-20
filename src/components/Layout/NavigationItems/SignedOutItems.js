@@ -10,11 +10,11 @@ const SignedOutItems =(props)=>{
         <ul className= 'unsigned-nav-ul'>
             <Item link ='/'><i className ='fal fa-home'></i></Item>
             <li><Logo/></li>
-            <li className = 'cta-Login-Mobile'>
-                <button>Log In</button>
-                <button>Sign Up</button>
-            </li>
             <li><SearchBar  placeholder = 'Search memeBank 😂'/></li>
+            <li className = 'cta-Login-Mobile'>
+                <button className ='cta-AuthBtn'>Log In</button>
+                <button className ='cta-AuthBtn'>Sign Up</button>
+            </li>
             <li className = 'cta-Login-Desktop'><button>
                     <span>&nbsp;Have an account?&nbsp;</span>
                     <span>Log In&nbsp;</span>
