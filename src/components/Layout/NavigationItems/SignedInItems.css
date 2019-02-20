@@ -22,6 +22,9 @@
 .user-btn-holder{
     display: none;
 }
+.shortcut-profile-settings{
+    display : none;
+}
 
 @media only screen and (min-width : 600px){
     .nav-ul > li:nth-child(1){
@@ -60,7 +63,8 @@
     }
     .user-btn-holder{
         margin-right: 20px;
-        display: block;
+        display: inline-block;
+        position: relative;
     }
     .user-button span{
        vertical-align: middle;
@@ -71,5 +75,18 @@
     }
     .user-button span i {
         padding : 0 5px;
+    }
+    .shortcut-profile-settings{
+        display: none;
+        position : absolute;
+        width : 100%;
+        margin-top : 5px;
+        background-color : #F1F1F1;
+    }
+    .shortcut-profile-settings a{
+        display: block;
+    }
+    .show{
+        display : block;
     }
 }

@@ -1,20 +1,25 @@
 import React from 'react';
 import Item from './NavigationItem/Item';
 import SearchBar from '../../SearchBar/SearchBar';
-import {Link} from 'react-router-dom';
+import Logo from '../../Logo/Logo';
 import './SignedOutItems.css';
 
 
 const SignedOutItems =(props)=>{
     return(
-        <ul className= 'nav-ul'>
+        <ul className= 'unsigned-nav-ul'>
             <Item link ='/'><i className ='fal fa-home'></i></Item>
-            <li><SearchBar placeholder = 'Search memeBank 😂'/></li>
-            <li><Link to ='/'>
-                    <span>Have an account?</span>
-                    <span>Log In</span>
+            <li><Logo/></li>
+            <li className = 'cta-Login-Mobile'>
+                <button>Log In</button>
+                <button>Sign Up</button>
+            </li>
+            <li><SearchBar  placeholder = 'Search memeBank 😂'/></li>
+            <li className = 'cta-Login-Desktop'><button>
+                    <span>&nbsp;Have an account?&nbsp;</span>
+                    <span>Log In&nbsp;</span>
                     <span><i className="fas fa-caret-down"></i></span>
-                </Link>
+                </button>
             </li>
         </ul>
     )
